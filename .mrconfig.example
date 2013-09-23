@@ -1,23 +1,23 @@
 [perspective-api]
 checkout = git clone 'git@github.com:perspective/perspective-api.git' 'perspective-api'
-link = sudo npm link
+link = npm link
 order = 99
 
 [perspective-api-tasks]
 checkout = git clone 'git@github.com:perspective/perspective-api-tasks.git' 'perspective-api-tasks'
-link = sudo npm link
+link = npm link
 
 [perspective-api-views]
 checkout = git clone 'git@github.com:perspective/perspective-api-views.git' 'perspective-api-views'
-link = sudo npm link
+link = npm link
 
 [perspective-client]
 checkout = git clone 'git@github.com:perspective/perspective-client.git' 'perspective-client'
 
 [perspective-core]
 checkout = git clone 'git@github.com:perspective/perspective-core.git' 'perspective-core'
-link = sudo npm link
+link = npm link
 order = 1
 
-[perspective-core]
+[perspective-dev]
 checkout = git clone 'git@github.com:perspective/perspective-dev.git' 'perspective-dev'
