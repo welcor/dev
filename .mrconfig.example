@@ -1,21 +1,28 @@
 [perspective-api]
 checkout = git clone 'git@github.com:perspective/perspective-api.git' 'perspective-api'
-link = npm link
+link = npm link ../perspective-api-tasks && npm link ../perspective-api-views && npm link ../perspective-core
+install = npm install
 order = 99
 
 [perspective-api-tasks]
 checkout = git clone 'git@github.com:perspective/perspective-api-tasks.git' 'perspective-api-tasks'
-link = npm link
+link = npm link ../perspective-core
+install = npm install
+order = 50
 
 [perspective-api-views]
 checkout = git clone 'git@github.com:perspective/perspective-api-views.git' 'perspective-api-views'
-link = npm link
+link = npm link ../perspective-core
+install = npm install
+order = 51
 
 [perspective-client]
 checkout = git clone 'git@github.com:perspective/perspective-client.git' 'perspective-client'
+install = npm install
 
 [perspective-core]
 checkout = git clone 'git@github.com:perspective/perspective-core.git' 'perspective-core'
+install = npm install
 link = npm link
 order = 1
 
