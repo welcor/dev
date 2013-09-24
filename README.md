@@ -18,6 +18,8 @@ To ease this process, we recommend using [myrepos](https://github.com/joeyh/myre
     will git clone all modules
 5. `mr link`  
     will invoke `npm link` in correct order on each module. Note: you probably get a warning here requiring you to add the path to `...perspective/.mrconfig` file to `~/.mrtrust`.
+6. `mr install`
+    will invoke `npm install` in correct order on each module.
 
 By now you should have:
 
