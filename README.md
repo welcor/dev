@@ -39,3 +39,9 @@ Other useful `mr` commands are:
 ### Boot the server, and reload on changes:
 1. `npm install -g nodemon`
 2. `nodemon bin/perspective-api.js`
+
+
+License
+-------
+
+MIT
