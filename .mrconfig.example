@@ -16,10 +16,17 @@ link = npm link ../perspective-core
 install = npm install
 order = 51
 
+[perspective-api-jenkins]
+checkout = git clone 'git@github.com:perspective/perspective-api-jenkins.git' 'perspective-api-jenkins'
+link = npm link ../perspective-jenkins
+install = npm install
+order = 52
+
 [perspective-client]
 checkout = git clone 'git@github.com:perspective/perspective-client.git' 'perspective-client'
 link = npm link ../perspective-core
 install = npm install
+order = 98
 
 [perspective-core]
 checkout = git clone 'git@github.com:perspective/perspective-core.git' 'perspective-core'
