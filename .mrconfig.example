@@ -18,6 +18,7 @@ order = 51
 
 [perspective-client]
 checkout = git clone 'git@github.com:perspective/perspective-client.git' 'perspective-client'
+link = npm link ../perspective-core
 install = npm install
 
 [perspective-core]
