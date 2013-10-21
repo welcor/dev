@@ -1,6 +1,6 @@
 [perspective-api]
 checkout = git clone 'git@github.com:perspective/perspective-api.git' 'perspective-api'
-link = npm link ../perspective-api-tasks && npm link ../perspective-api-views && npm link ../perspective-core
+link = npm link ../perspective-api-tasks && npm link ../perspective-api-views && npm link ../perspective-api-jenkins && npm link ../perspective-core
 install = npm install
 order = 99
 
@@ -18,7 +18,7 @@ order = 51
 
 [perspective-api-jenkins]
 checkout = git clone 'git@github.com:perspective/perspective-api-jenkins.git' 'perspective-api-jenkins'
-link = npm link ../perspective-jenkins
+link = npm link ../perspective-core
 install = npm install
 order = 52
 
