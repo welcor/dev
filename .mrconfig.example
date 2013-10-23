@@ -36,3 +36,6 @@ order = 1
 
 [perspective-dev]
 checkout = git clone 'git@github.com:perspective/perspective-dev.git' 'perspective-dev'
+
+[perspective-startup-scripts]
+checkout = git clone 'https://github.com/perspective/perspective-startup-scripts.git' 'perspective-startup-scripts'
