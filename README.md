@@ -24,11 +24,14 @@ To ease this process, we recommend using [myrepos](https://github.com/joeyh/myre
 By now you should have:
 
 	perspective
-	├── perspective-api
+	|── perspective-api
+	├── perspective-api-jenkins
 	├── perspective-api-tasks
 	├── perspective-api-views
 	├── perspective-client
-	└── perspective-core
+	├── perspective-core
+	├── perspective-dev
+	└── perspective-startup-scripts
 
 Other useful `mr` commands are:
 
@@ -36,9 +39,17 @@ Other useful `mr` commands are:
 * `mr status` to run `git status` on all modules
 * ... you get the point. See `mr help` for more info.
 
-### Boot the server, and reload on changes:
-1. `npm install -g nodemon`
-2. `nodemon bin/perspective-api.js`
+### Boot the server and make it reload on changes:
+1. `cd perspective-api`
+2. `rethinkdb`
+3. Open new tab, also in `perspective-api`
+4. `npm install -g nodemon`
+5. `nodemon bin/perspective-api.js`
+
+### Boot frontend
+1. `cd perspective-client`
+2. `npm install`
+3. `./server.js`
 
 
 License
