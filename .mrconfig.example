@@ -1,41 +1,58 @@
-[perspective-api]
-checkout = git clone 'git@github.com:perspective/perspective-api.git' 'perspective-api'
-link = npm link ../perspective-api-tasks && npm link ../perspective-api-views && npm link ../perspective-api-jenkins && npm link ../perspective-core
-install = npm install
-order = 99
-
-[perspective-api-tasks]
-checkout = git clone 'git@github.com:perspective/perspective-api-tasks.git' 'perspective-api-tasks'
-link = npm link ../perspective-core
+[perspective-tasks]
+checkout = git clone 'git@github.com:perspective/perspective-tasks.git' 'perspective-tasks'
+link = npm link ../perspective-core && npm link ../perspective-core-server && npm link ../perspective-core-rest && npm link ../perspective-core-db
 install = npm install
 order = 50
 
-[perspective-api-views]
-checkout = git clone 'git@github.com:perspective/perspective-api-views.git' 'perspective-api-views'
-link = npm link ../perspective-core
-install = npm install
-order = 51
-
-[perspective-api-jenkins]
-checkout = git clone 'git@github.com:perspective/perspective-api-jenkins.git' 'perspective-api-jenkins'
-link = npm link ../perspective-core
+[perspective-jenkins]
+checkout = git clone 'git@github.com:perspective/perspective-jenkins.git' 'perspective-jenkins'
+link = npm link ../perspective-core && npm link ../perspective-core-server && npm link ../perspective-core-rest && npm link ../perspective-core-web-socket
 install = npm install
 order = 52
 
-[perspective-client]
-checkout = git clone 'git@github.com:perspective/perspective-client.git' 'perspective-client'
-link = npm link ../perspective-core
+[perspective-core-server]
+checkout = git clone 'git@github.com:perspective/perspective-core-server.git' 'perspective-core-server'
+link = npm link
 install = npm install
-order = 98
+order = 1
 
 [perspective-core]
 checkout = git clone 'git@github.com:perspective/perspective-core.git' 'perspective-core'
-install = npm install
 link = npm link
+install = npm install
 order = 1
 
-[perspective-dev]
-checkout = git clone 'git@github.com:perspective/perspective-dev.git' 'perspective-dev'
+[perspective-core-web-socket-helper]
+checkout = git clone 'git@github.com:perspective/perspective-core-web-socket-helper.git' 'perspective-core-web-socket-helper'
+link = npm link ../perspective-core
+install = npm install
+order = 2
 
-[perspective-startup-scripts]
-checkout = git clone 'git@github.com:perspective/perspective-startup-scripts.git' 'perspective-startup-scripts'
+[perspective-core-web-socket]
+checkout = git clone 'git@github.com:perspective/perspective-core-web-socket.git' 'perspective-core-web-socket'
+link = npm link ../perspective-core-web-socket-helper && npm link ../perspective-core-server
+install = npm install
+order = 3
+
+[perspective-core-rest]
+checkout = git clone 'git@github.com:perspective/perspective-core-rest.git' 'perspective-core-rest'
+link = npm link ../perspective-core-server && npm link ../perspective-core
+install = npm install
+order = 3
+
+[perspective-core-db]
+checkout = git clone 'git@github.com:perspective/perspective-core-db.git' 'perspective-core-db'
+link = npm link ../perspective-core-server && npm link ../perspective-core
+install = npm install
+order = 3
+
+[perspective-client]
+checkout = git clone 'git@github.com:perspective/perspective-client.git' 'perspective-client'
+install = npm install
+order = 98
+
+[dev]
+checkout = git clone 'git@github.com:perspective/dev.git' 'dev'
+
+[startup-scripts]
+checkout = git clone 'git@github.com:perspective/startup-scripts.git' 'startup-scripts'
