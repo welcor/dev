@@ -1,4 +1,4 @@
-perspective-dev
+dev
 ===========
 
 ## Contributing
@@ -50,7 +50,6 @@ Other useful `mr` commands are:
 1. `cd perspective-client`
 2. `npm install`
 3. `./server.js`
-
 
 License
 -------
