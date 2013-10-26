@@ -54,5 +54,8 @@ order = 98
 [dev]
 checkout = git clone 'git@github.com:perspective/dev.git' 'dev'
 
+[perspective]
+checkout = git clone 'git@github.com:perspective/perspective.git' 'perspective'
+
 [startup-scripts]
 checkout = git clone 'git@github.com:perspective/startup-scripts.git' 'startup-scripts'
