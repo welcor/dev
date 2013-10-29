@@ -24,8 +24,9 @@ To ease this process, we recommend using [myrepos](https://github.com/joeyh/myre
 By now you should have:
 
 	perspective
-	├── dev
-	├── perspective-client
+	|── dev
+	|── perspective
+	|── perspective-client
 	├── perspective-core
 	├── perspective-core-db
 	├── perspective-core-rest
@@ -43,15 +44,16 @@ Other useful `mr` commands are:
 * ... you get the point. See `mr help` for more info.
 
 ### Boot servers:
-1. Run `rethinkdb` from a desired folder. Run `rethinkdb` from the folder in the future to keep your data.
-2. `cd perspective-tasks && ./dev.sh`
-2. `cd perspective-jenkins && ./dev.sh`
+1. `npm install -g nodemon
+2. Run `rethinkdb` from a desired folder. Run `rethinkdb` from the folder in the future to keep your data.
+3. `cd perspective-tasks && ./dev.sh`
+4. `cd perspective-jenkins && ./dev.sh`
 
 ### Boot frontend
 1. `cd perspective-client`
 2. `npm install`
 3. `bower install`
-3. `./server.js`
+4. `./server.js`
 
 License
 -------
