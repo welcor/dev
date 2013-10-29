@@ -43,11 +43,11 @@ Other useful `mr` commands are:
 * `mr status` to run `git status` on all modules
 * ... you get the point. See `mr help` for more info.
 
-### Boot servers:
-1. `npm install -g nodemon
-2. Run `rethinkdb` from a desired folder. Run `rethinkdb` from the folder in the future to keep your data.
-3. `cd perspective-tasks && ./dev.sh`
-4. `cd perspective-jenkins && ./dev.sh`
+### Boot the servers and make them reload on changes:
+1. `cd perspective-jenkins && ./dev.sh` and/or `cd perspective-tasks && ./dev.sh`
+2. If you run tasks you also need to run `rethinkdb`
+3. The dev.sh files uses nodemon
+4. `npm install -g nodemon`
 
 ### Boot frontend
 1. `cd perspective-client`
