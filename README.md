@@ -64,18 +64,18 @@ To ease the process of handling multiple repositories, we recommend using [myrep
 By now you should have:
 
 	perspective
-	|── dev
-	|── perspective
-	|── perspective-client
-	├── perspective-core
-	├── perspective-core-db
-	├── perspective-core-rest
-	├── perspective-core-server
-	├── perspective-core-web-socket
-	├── perspective-core-web-socket-helper
-	├── perspective-jenkins
-	├── perspective-tasks
-	└── startup-scripts
+	|── dev - development tools and development near documentation
+	|── perspective - the web-site
+	|── perspective-client - the web client which connects to the different backend apps (jenkins, tasks, for now)
+	├── perspective-core - shared core components between web client and backend apps
+	├── perspective-core-db - component for connecting to the perspective db, uses rethinkdb
+	├── perspective-core-rest - component for a simplified process of creating rest apis
+	├── perspective-core-server - shared core components for every backend apps
+	├── perspective-core-web-socket - component for a simplified process of creating web-socket support
+	├── perspective-core-web-socket-helper - shared component between the perspective client and perspective-core-web-socket
+	├── perspective-jenkins - a jenkins backend app
+	├── perspective-tasks - a task manager backend app
+	└── startup-scripts - startup scripts for perspective on different os
 
 Other useful `mr` commands are:
 
