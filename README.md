@@ -12,17 +12,36 @@ dev
 How to contribute
 -----------------------------
 
-### Guidelines
+### Everyone
 1. Start with an [issue](https://github.com/perspective/perspective-client/issues). Does the feature/bug you seek exist?
-	* No? [Create a new issue](https://github.com/perspective/perspective-client/issues/new) and start a discussion on what you want to implement
-	* Yes? Is someone working on it already? Contribute in the discussion and see if you can help out
-2. Fork the desired repositores you want to improve
-3. Do your magic
-4. Open a pull request when:
+    * No? [Create a new issue](https://github.com/perspective/perspective-client/issues/new) and start a discussion on what you want to implement
+  	* Yes? Is someone working on it already? Contribute in the discussion and see if you can help out
+
+### Designer/UX Designer?
+1. Look at existing enhancements and issues and contribute with sketches, designs, ideas
+2. Create issues on existing functionality and upload sketches, designs, ideas
+
+### Business analyst/Team leader?
+1. Analyse what kind of information different stakeholders need on a ongoing project
+2. Do they need the same information at all times? Whats relevant at a given time in the project?
+3. What can we do to make perspective a suitable application for information sharing in a development project?
+4. Perspective strategy
+
+### Developer?
+
+#### New projects
+1. Suggest a new project in the issue list on GitHub
+2. Get the perspective members to create a repository
+3. Do the same as on existing projects
+
+#### Existing projects
+1.  Fork the desired repositores you want to improve
+2. Do your magic
+3. Open a pull request when:
 	* The work is stable
 	* Test coverage is in place
 
-### Setting up your dev environment
+#### Setting up your dev environment
 
 1. Install node.js
 2. Install bower with `npm install -g bower`
@@ -64,12 +83,12 @@ Other useful `mr` commands are:
 * `mr status` to run `git status` on all modules
 * ... you get the point. See `mr help` for more info.
 
-### Boot the back and make them reload on changes:
+#### Boot the back and make them reload on changes:
 1. Run `rethinkdb`
 2. `cd perspective-jenkins && ./dev.sh`
 3. `cd perspective-tasks && ./dev.sh`
 
-### Boot frontend
+#### Boot frontend
 1. `cd perspective-client`
 2. `npm install`
 3. `bower install`
@@ -93,7 +112,8 @@ Design principles
 
 Architecture
 -----------------
-* TODO
+
+![perspective archiveture](https://raw.github.com/perspective/dev/master/perspective_architecture.png "")
 
 
 License
