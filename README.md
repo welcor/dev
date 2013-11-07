@@ -1,13 +1,13 @@
 dev
 ===========
 
-* What is perspective?
-* What is the goals of perspective?
-* How to contribute
-	* Contribution guidelines
+* [What is perspective?](http://perspective.github.io/perspective/)
+* [What is the goals of perspective?](http://perspective.github.io/perspective/goals.html)
+* [How to contribute](#how-to-contribute)
+	* Contribution guidelines pr. role
 	* Setting up your dev environment
-* Design principles
-* Architecture
+* [Design principles](#design-principles)
+* [Architecture](#architecture)
 
 How to contribute
 -----------------------------
@@ -23,19 +23,19 @@ How to contribute
 
 ### Business analyst/Team leader?
 1. Analyse what kind of information different stakeholders need on a ongoing project
-2. Do they need the same information at all times? Whats relevant at a given time in the project?
+2. Do they need the same information at all times? What's relevant at a given time in the project?
 3. What can we do to make perspective a suitable application for information sharing in a development project?
 4. Perspective strategy
 
 ### Developer?
 
-#### New projects
+#### On new apps/modules/integration points
 1. Suggest a new project in the issue list on GitHub
 2. Get the perspective members to create a repository
-3. Do the same as on existing projects
+3. Follow the guidelines below for "existing code"
 
-#### Existing projects
-1.  Fork the desired repositores you want to improve
+#### Existing code
+1. Fork the desired repositores you want to improve
 2. Do your magic
 3. Open a pull request when:
 	* The work is stable
@@ -64,12 +64,12 @@ To ease the process of handling multiple repositories, we recommend using [myrep
 By now you should have:
 
 	perspective
-	|── dev - development tools and development near documentation
-	|── perspective - the web-site
-	|── perspective-client - the web client which connects to the different backend apps (jenkins, tasks, for now)
+	|── dev - development tools and documentation
+	|── perspective - the website
+	|── perspective-client - front-end web client connecting to different backend apps (jenkins, tasks)
 	├── perspective-core - shared core components between web client and backend apps
 	├── perspective-core-db - component for connecting to the perspective db, uses rethinkdb
-	├── perspective-core-rest - component for a simplified process of creating rest apis
+	├── perspective-core-rest - component for a simplified process of creating REST APIs
 	├── perspective-core-server - shared core components for every backend apps
 	├── perspective-core-web-socket - component for a simplified process of creating web-socket support
 	├── perspective-core-web-socket-helper - shared component between the perspective client and perspective-core-web-socket
@@ -99,7 +99,12 @@ Design principles
 -----------------
 
 * We strive to follow the principles of [12 factor apps](http://12factor.net/)
-* As we're developing a tool for software development teams, we afford to live on the cutting edge of technology. One of perspective's goals is to be hackable and a fun place to test new technology. Currently we are using:
+	* Inter-application-communication are [treated as attached resources](http://12factor.net/backing-services)
+	* Config is stored as environment variables. (see `dev.sh` in perspective-jenkins and perspective-tasks)
+* We're inspired by [Spotify](https://dl.dropboxusercontent.com/u/1018963/Articles/SpotifyScaling.pdf):
+	* Application/component silos in backend, with expert teams pr. feature --> apps (perspective-jenkins, perspective-tasks)
+	* One front-end app pr. platform --> (perspective-client)
+* As we're developing a tool for software development teams, we can afford to live on the cutting edge of technology. One of perspective's goals is to be hackable and a fun place to test new technology. Currently we are using:
 	* Front-end:
 		* Ractive.js for two-way binding, along with Object.observe (only supported in Chrome with experimental JavaScript features enabled)
 		* Page.js for simplistic routing
@@ -113,7 +118,13 @@ Design principles
 Architecture
 -----------------
 
-![perspective archiveture](https://raw.github.com/perspective/dev/master/perspective_architecture.png "")
+![perspective architecture](https://raw.github.com/perspective/dev/master/perspective_architecture.png "")
+
+The ***web client*** is a standalone application that provides perspectives only front-end at the moment.
+It communicates with back-end applications such as ***perspective-tasks*** and ***perspective-jenkins*** over HTTP/REST and WebSockets.
+Back-end applications may rely on several components, such as ***perspective-core-db*** and ***perspective-core-rest***.
+
+As both the front-end and back-end is written in JavaScript, we are able to share some code as seen in ***perspective-core***
 
 
 License
