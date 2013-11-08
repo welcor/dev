@@ -11,6 +11,7 @@ dev
 
 How to contribute
 -----------------------------
+Note: due to dependency on rethinkdb, there's currently no support for running on platforms other than linux/mac.
 
 ### Everyone
 1. Start with an [issue](https://github.com/perspective/perspective-client/issues). Does the feature/bug you seek exist?
