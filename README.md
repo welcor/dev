@@ -48,6 +48,7 @@ Note: due to dependency on rethinkdb, there's currently no support for running o
 2. Install bower with `npm install -g bower`
 3. Install nodemon with `npm install -g nodemon` to make servers reload on change
 4. Install rethinkdb
+   Note: rethinkdb can only run on linux/mac hosts. On windows, run a virtual server and make sure to expose ports 8080, 28015 and 29015 from this.
 5. Clone all modules, as described below.
 
 To ease the process of handling multiple repositories, we recommend using [myrepos](https://github.com/joeyh/myrepos). Simply put [mr](https://github.com/joeyh/myrepos/blob/master/mr) on your `PATH` and you are good to go:
@@ -87,6 +88,8 @@ Other useful `mr` commands are:
 * `mr status` to run `git status` on all modules
 * ... you get the point. See `mr help` for more info.
 
+Verify that the settings in perspective-jenkins/dev.sh, perspective-tasks/dev.sh and perspective-client/dev.sh match your environment.
+
 #### Boot the back and make them reload on changes:
 1. Run `rethinkdb`
 2. `cd perspective-jenkins && ./dev.sh`
@@ -96,8 +99,8 @@ Other useful `mr` commands are:
 1. `cd perspective-client`
 2. `npm install`
 3. `bower install`
-4. `./dev.sh`
-
+4. `make.js`
+5. `./dev.sh`
 
 Design principles
 -----------------
