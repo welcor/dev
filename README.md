@@ -53,12 +53,15 @@ To ease the process of handling multiple repositories, we recommend using [myrep
 
 1. `mkdir perspective`
 2. `curl -o .mrconfig https://raw.github.com/perspective/dev/master/.mrconfig.example`
-3. (review the .mrconfig file)
-4. `mr checkout`  
+3. `touch ~/.mrconfig`
+4. (review the .mrconfig file)
+5. ``echo `pwd`/.mrconfig >> ~/.mrtrust``
+    To avoid a warning later.
+6. `mr checkout`  
     will git clone all modules
-5. `mr link`  
-    will invoke `npm link` in correct order on each module. Note: you probably get a warning here requiring you to add the path to `...perspective/.mrconfig` file to `~/.mrtrust`.
-6. `mr install`
+7. `mr link`  
+    will invoke `npm link` in correct order on each module. 
+8. `mr install`
     will invoke `npm install` in correct order on each module.
 
 By now you should have:
